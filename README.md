@@ -1,31 +1,29 @@
 # laravel1
  Latihan laravel
 
-=> Membuat Project Laravel 
+=> Membuat Project Laravel =>
 composer create-project --prefer dist laravel/laravel nama_folder
 contoh:
 composer create-project --prefer-dist laravel/laravel blog
 
 
-=> Routes 
-
+=> Routes =>
 routes/web.php
 Route::get('/link', 'nama_Controller@method');
 contoh : Route::get('/home', 'HomeController@index');
 
 
-=> Setting Database
-
+=> Setting Database =>
 file .env DB_DATABASE=nama_database
 
 
-=> Membuat Controller sekaligus model 
+=> Membuat Controller sekaligus model =>
 cmd : php artisan make:controller nama_controller -r -m nama_model
 contoh:
 php artisan make:controller StudentsController -r -m Student
 
 
-=> Membuat base template layout 
+=> Membuat base template layout =>
 buat folder spesifik di dalam folder view
 views/nama_folder
 buat file : nama_file.blade.php
@@ -35,7 +33,7 @@ views/template/base.blade.php
 container atau isi : @yield('container')
 
 
-=> Mengisi tampilan dari template 
+=> Mengisi tampilan dari template =>
 buat folder views/nama_folder
 buat file di views/namafolder/nama_file.blade.php
 di isi baris pertama : @extends('folder_template/nama_file');
@@ -56,13 +54,13 @@ isi file ...
 @endsection
 
 
-=> membuat tabel dari php artisan 
+=> membuat tabel dari php artisan =>
 cmd : php artisan make:migration create_namaTabel_table
 contoh:
 php artisan make:migration create_students_table
 
 
-=> Membuat field tabel
+=> Membuat field tabel =>
 buka folder database/migrations
 function up di isi
 $table->bigIncrements('nama_tabel_auto_increment');
@@ -72,10 +70,10 @@ $table->bigIncrements('id');
 $tabel->char('nim', 9)->unique();
 
 
-=> Migrate
+=> Migrate =>
 cmd : php artisan migrate. Untuk memasukkan tabel ke database
 
-=> get Database
+=> get Database =>
 pada controller, diatas tambahkan use App\nama_model
 pada function index, tambahkan... 
 $variabel = nama_model::all();
