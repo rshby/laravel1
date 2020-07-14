@@ -92,4 +92,4 @@ return view('students/index', compact('variabel'));
 dalam file di views/students/index.blade.php
 @foreach($students as $std)
    <p>Nama : {{ $std->nama }}</p>
-@endforeach 
+@endforeach  
