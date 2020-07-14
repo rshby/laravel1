@@ -10,7 +10,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-10">
+        <div class="col-8">
             <table class="table text-center">
                 <thead class="thead-dark">
                     <tr>
@@ -38,6 +38,9 @@
                     @endforeach
                 </tbody>
             </table>
+        </div>
+        <div class="col-4">
+            <h1>Form</h1>
         </div>
     </div>
 </div>
