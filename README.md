@@ -1,8 +1,7 @@
 # laravel1
  Latihan laravel
 
-=> Membuat Project Laravel
-
+=> Membuat Project Laravel 
 composer create-project --prefer dist laravel/laravel nama_folder
 contoh:
 composer create-project --prefer-dist laravel/laravel blog
