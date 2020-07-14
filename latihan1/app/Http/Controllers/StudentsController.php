@@ -26,7 +26,7 @@ class StudentsController extends Controller
      */
     public function create()
     {
-        //
+        return view('students/create');
     }
 
     /**
@@ -37,7 +37,25 @@ class StudentsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // $data = new Student;
+        // $data->nama = $request->nama;
+        // $data->nim = $request->nim;
+        // $data->email = $request->email;
+        // $data->jurusan = $request->jurusan;
+
+        // $data->save();
+        // Student::create([
+        //     'nama' => $request->nama,
+        //     'nim' => $request->nim,
+        //     'email' => $request->email,
+        //     'jurusan' => $request->jurusan
+        // ]);
+        $request->validate([
+            'nama' => 'required|unique',
+            'nim' => 'required|size:9'
+        ]);
+        Student::create($request->all());
+        return redirect('/students')->with('status', 'Data berhasil ditambahkan!!');
     }
 
     /**
@@ -48,7 +66,7 @@ class StudentsController extends Controller
      */
     public function show(Student $student)
     {
-        //
+        return view('students/show', compact('student'));
     }
 
     /**
