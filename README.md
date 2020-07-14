@@ -2,18 +2,21 @@
  Latihan laravel
 
 => Membuat Project Laravel
+
 composer create-project --prefer dist laravel/laravel nama_folder
 contoh:
 composer create-project --prefer-dist laravel/laravel blog
 
 
 => Routes 
+
 routes/web.php
 Route::get('/link', 'nama_Controller@method');
 contoh : Route::get('/home', 'HomeController@index');
 
 
 => Setting Database
+
 file .env DB_DATABASE=nama_database
 
 
