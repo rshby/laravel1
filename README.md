@@ -19,13 +19,13 @@ contoh : Route::get('/home', 'HomeController@index');
 file .env DB_DATABASE=nama_database
 
 
-=> Membuat Controller sekaligus model
+=> Membuat Controller sekaligus model 
 cmd : php artisan make:controller nama_controller -r -m nama_model
 contoh:
 php artisan make:controller StudentsController -r -m Student
 
 
-=> Membuat base template layout
+=> Membuat base template layout 
 buat folder spesifik di dalam folder view
 views/nama_folder
 buat file : nama_file.blade.php
@@ -35,7 +35,7 @@ views/template/base.blade.php
 container atau isi : @yield('container')
 
 
-=> Mengisi tampilan dari template
+=> Mengisi tampilan dari template 
 buat folder views/nama_folder
 buat file di views/namafolder/nama_file.blade.php
 di isi baris pertama : @extends('folder_template/nama_file');
@@ -56,7 +56,7 @@ isi file ...
 @endsection
 
 
-=> membuat tabel dari php artisan
+=> membuat tabel dari php artisan 
 cmd : php artisan make:migration create_namaTabel_table
 contoh:
 php artisan make:migration create_students_table
